@@ -1,0 +1,27 @@
+<table>
+    <tr class="heading">
+        <td>
+            Items
+        </td>
+        
+        <td  class="align-right">
+            Hours Worked
+        </td>
+            <td  class="align-right">
+            Hourly Rate
+        </td>
+            <td  class="align-right">
+            Total
+        </td>
+    </tr>
+    
+    <tbody id="tableStuff">
+    <!-- use this id to show the Array in question 4a -->
+    <tr class="item" *ngFor="let item of haChildData.items; index as i">
+        <td style="width: 32%;">{{haChildData.items[i].title}}</td>
+        <td style="width: 18%;" class="align-right">{{haChildData.items[i].hours}}</td>
+        <td class="align-right">{{haChildData.items[i].hourlyRate | currency}}</td>
+        <td class="align-right">{{haChildData.items[i].hours * haChildData.items[i].hourlyRate | currency}}</td>
+    </tr>
+    </tbody>
+</table>

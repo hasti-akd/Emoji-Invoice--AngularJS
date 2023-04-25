@@ -1,0 +1,6 @@
+<div class="invoice-box" style="margin-top: 10px;">
+    Item: <input type="text" name="item" style="width: 250px;"  [(ngModel)]="haItemTitle">
+    &nbsp; Hours: <input type="number" style="width: 40px;" name="hours"  #haItemHours>
+    &nbsp; Hourly Rate:  <input type="number" style="width: 40px" name="hourly rate"  #haItemHourlyRate>
+    <button type="button" (click)="haAddNewItem(haItemHours)">Add Hours</button>
+</div>

@@ -1,0 +1,28 @@
+<table>
+    <tr>
+        <td style="font-weight: bold;">Total Hours</td>
+        <td style="text-align: right; width: 24.6%; font-weight: bold;">{{haGetTotalHours()}}</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr class="subtotal">
+         <td></td>
+          <td></td> <td  class="align-right">Sub Total:</td>
+         <td  class="align-right">
+          {{haGetSubTotal()| currency}}
+         </td>
+    </tr>
+    <tr class="taxes">
+         <td></td> <td></td> <td  class="align-right">Taxes (13%): </td>
+         <td  class="align-right">
+          {{haGetTax() | currency}}
+         </td>
+    </tr> 
+    <tr class="total">
+         <td></td> <td style="border-top:none;"></td> <td  class="align-right" style="font-weight: bold;"> Total:</td>
+         <td  class="align-right" style="font-weight: bold;">
+            {{this.haSubTotal + this.haTax | currency}}
+         </td>
+    </tr>
+ </table>

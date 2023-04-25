@@ -1,0 +1,25 @@
+<table>
+    <tr class="heading">
+        <td colspan="3">
+            Payment Method
+        </td>
+        
+        <td>
+            Payment Types Accepted
+        </td>
+    </tr>
+    
+    <tr class="details">
+        <td colspan="3">
+            {{haPaymentMethod}}
+            <div style="color: #d62828; font-size: 14px;" id="message" *ngIf="this.haFlag">We do not accept AMEX</div>
+        </td>
+        <td>
+            <select style="margin-bottom: 10px;" id="mySelect" (change)="haCheckPaymentType($event)">
+                <option value={{item}} *ngFor="let item of haChildData.paymentType">
+                    {{item}}
+                </option>
+            </select>
+        </td>
+    </tr>
+</table>
